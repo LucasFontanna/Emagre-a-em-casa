@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Descubra como está sua rotina de hábitos | Emagreça em Casa</title>
+<meta name="description" content="Responda 10 perguntas rápidas e descubra quais áreas da sua rotina de alimentação, exercícios e hábitos podem receber mais atenção.">
+<meta property="og:title" content="Descubra como está sua rotina de hábitos">
+<meta property="og:description" content="Uma avaliação rápida de 2 minutos sobre sua rotina de alimentação e hábitos saudáveis.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<main class="quiz-shell">
+
+  <div class="quiz-header" id="quizHeader" hidden>
+    <button class="quiz-back" id="btnBack" type="button" aria-label="Voltar para a pergunta anterior" disabled>←</button>
+    <div class="progress-wrap">
+      <div class="progress-label" id="progressLabel">Pergunta 1 de 10</div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== INTRO ===================== -->
+  <section class="screen intro-card" id="screenIntro">
+    <span class="intro-badge">Avaliação rápida e gratuita</span>
+    <h1>Descubra como está sua rotina de hábitos</h1>
+    <p>Responda 10 perguntas rápidas e descubra quais áreas da sua rotina podem receber mais atenção.</p>
+    <div class="intro-timer">⏱ Leva menos de 2 minutos</div>
+    <button class="btn btn-primary" id="btnStart" type="button">COMEÇAR A AVALIAÇÃO</button>
+  </section>
+
+  <!-- ===================== PERGUNTAS ===================== -->
+  <section class="screen" id="screenQuestion" hidden>
+    <div class="q-eyebrow" id="qEyebrow">SOBRE VOCÊ</div>
+    <h2 class="q-title" id="qTitle"></h2>
+    <div class="options" id="qOptions"></div>
+  </section>
+
+  <!-- ===================== PROCESSAMENTO ===================== -->
+  <section class="screen processing" id="screenProcessing" hidden>
+    <div class="spinner"></div>
+    <div class="processing-text" id="processingText">Analisando suas respostas...</div>
+    <div class="proc-bar-track"><div class="proc-bar-fill" id="procBarFill"></div></div>
+    <p class="processing-sub">Só mais um instante</p>
+  </section>
+
+  <!-- ===================== RESULTADO ===================== -->
+  <section class="screen result-card" id="screenResult" hidden>
+    <div class="result-eyebrow">SEU PERFIL ESTÁ PRONTO</div>
+    <h2 class="result-title" id="resultTitle">Buscando Consistência</h2>
+    <p class="result-lead" id="resultLead">Com base nas suas respostas, identificamos que organização e consistência podem ser pontos importantes para sua rotina.</p>
+
+    <div class="result-points" id="resultPoints"></div>
+
+    <p class="result-note">Esse resultado é apenas uma categoria de hábitos baseada nas suas respostas — não é um diagnóstico médico ou nutricional.</p>
+
+    <button class="btn btn-primary" id="btnResult" type="button">QUERO CONHECER O MÉTODO</button>
+  </section>
+
+</main>
+
+<script src="quiz.js"></script>
+</body>
+</html>
